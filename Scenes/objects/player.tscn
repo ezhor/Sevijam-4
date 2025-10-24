@@ -3,9 +3,16 @@
 [ext_resource type="Script" uid="uid://dnp7wwvah536j" path="res://Scripts/Player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://0cx6e8hy18ar" path="res://icon.svg" id="2_6t5aa"]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" node_paths=PackedStringArray("timer")]
 script = ExtResource("1_cvnsp")
-speed = 200.0
+speed = 500.0
+prefix = "position"
+timer = NodePath("MovementTimer")
+metadata/_custom_type_script = "uid://dnp7wwvah536j"
+
+[node name="MovementTimer" type="Timer" parent="."]
+wait_time = 0.05
+autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_6t5aa")

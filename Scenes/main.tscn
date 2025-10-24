@@ -1,8 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://dqjpsb701d25l"]
-
-[ext_resource type="Script" uid="uid://dorrprbns5uvd" path="res://Scripts/Connection.gd" id="1_jjgbg"]
+[gd_scene format=3 uid="uid://dqjpsb701d25l"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Connection" type="Node" parent="."]
-script = ExtResource("1_jjgbg")

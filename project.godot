@@ -15,6 +15,10 @@ run/main_scene="uid://dqjpsb701d25l"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Connection="*res://Scenes/objects/connection.tscn"
+
 [display]
 
 window/size/viewport_width=1920

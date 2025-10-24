@@ -1,6 +1,7 @@
 extends Node
 
-@export var websocket_url = "ws://187.33.147.149:8080"
+@export var websocket_url: String = "ws://187.33.147.149:8080"
+@export var player: PackedScene
 
 # Our WebSocketClient instance.
 var socket = WebSocketPeer.new()
@@ -10,13 +11,7 @@ func _ready():
 	# Initiate connection to the given URL.
 	var err = socket.connect_to_url(websocket_url)
 	if err == OK:
-		print("Connecting to %s..." % websocket_url)
-		# Wait for the socket to connect.
-		await get_tree().create_timer(2).timeout
-
-		# Send data.
-		print("> Sending test packet.")
-		socket.send_text("Test packet")
+		get_window().add_child.call_deferred(player.instantiate())
 	else:
 		push_error("Unable to connect.")
 		set_process(false)
@@ -43,3 +38,6 @@ func _process(_delta):
 		var code = socket.get_close_code()
 		print("WebSocket closed with code: %d. Clean: %s" % [code, code != -1])
 		set_process(false)
+
+func send_data(data: String):
+	socket.send_text(data)

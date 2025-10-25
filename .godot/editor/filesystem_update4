@@ -2,3 +2,4 @@ res://Scenes/objects/player.tscn
 res://Scripts/NetworkObject.gd
 res://Scenes/objects/connection.tscn
 res://Scripts/Connection.gd
+res://Scenes/main.tscn

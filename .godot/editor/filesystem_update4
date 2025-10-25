@@ -2,3 +2,5 @@ res://Scenes/objects/enemy.tscn
 res://Scripts/Enemy.gd
 res://Scripts/EnemiesManager.gd
 res://Scenes/main.tscn
+res://Scenes/objects/player.tscn
+res://Scenes/objects/identity_manager.tscn

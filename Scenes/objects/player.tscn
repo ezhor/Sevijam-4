@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bemol3e8ab0ey"]
 
 [ext_resource type="Script" uid="uid://dnp7wwvah536j" path="res://Scripts/Player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://0cx6e8hy18ar" path="res://icon.svg" id="2_6t5aa"]
+[ext_resource type="Texture2D" uid="uid://ccpx6px5wm0k6" path="res://Sprites/prueba.png" id="2_718o8"]
 
 [node name="Player" type="Node2D" node_paths=PackedStringArray("sprite", "timer")]
 script = ExtResource("1_cvnsp")
@@ -16,4 +16,4 @@ wait_time = 0.05
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_6t5aa")
+texture = ExtResource("2_718o8")

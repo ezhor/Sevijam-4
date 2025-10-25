@@ -1,3 +1,4 @@
+TextureProgressBar
 Node2D
 TouchScreenButton
 AnimatedSprite2D
@@ -6,7 +7,6 @@ Node
 TextureRect
 CanvasLayer
 Camera2D
-TextureProgressBar
 TileMapLayer
 Timer
 TileMap

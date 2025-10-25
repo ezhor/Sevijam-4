@@ -1,2 +1,4 @@
 res://Scenes/objects/enemy.tscn
 res://Scripts/Enemy.gd
+res://Scripts/EnemiesManager.gd
+res://Scenes/main.tscn

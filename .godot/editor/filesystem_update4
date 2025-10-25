@@ -14,3 +14,6 @@ res://Scripts/AbstractPlayer.gd
 res://Animations/character.tres
 res://Scenes/objects/bounds_manager.tscn
 res://Scripts/PlayerAttack.gd
+res://Scripts/Connection.gd
+res://Scripts/EnemyAttack.gd
+res://Scripts/NetworkObject.gd

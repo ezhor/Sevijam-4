@@ -14,11 +14,16 @@ func _ready() -> void:
 	else:
 		print("No timer found on " + name)
 
-func _on_send():
+func _on_send():	
 	Connection.send_data(prefix + "@" + current_data)
 
 func send_data(data: String):
+	if timer == null:
+		push_error("Sending sync data without a timer in " + name)
 	current_data = data
+	
+func send_data_immediate(data: String):
+	Connection.send_data(prefix + "@" + data)
 	
 func _on_data(data: String):
 	if data.split("@")[1] == prefix:

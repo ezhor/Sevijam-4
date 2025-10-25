@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dqjpsb701d25l"]
+[gd_scene load_steps=14 format=4 uid="uid://dqjpsb701d25l"]
 
 [ext_resource type="Script" uid="uid://mm3y2dhwin1m" path="res://Scripts/EnemiesManager.gd" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://dkr0hu74buj3x" path="res://Scenes/objects/enemy.tscn" id="2_bo1nx"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bgrv5wypxll5r" path="res://Sprites/UI/map-base.png" id="6_21xkr"]
 [ext_resource type="Script" uid="uid://bxbexi25vvgnl" path="res://Scripts/UI/Map.gd" id="6_344ge"]
 [ext_resource type="PackedScene" uid="uid://b66u1uvcq6wc6" path="res://Scenes/UI/map_icon.tscn" id="7_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://clg17lnxpjagd" path="res://Sprites/UI/joystik-1.png" id="9_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://d26uct5vkjo1e" path="res://Sprites/UI/Attack.png" id="9_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://b8tptbuxhacqn" path="res://Sprites/UI/joystik-2.png" id="10_6iyac"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("3_8gbba")
@@ -63,7 +66,7 @@ prefix = "enemy"
 [node name="Map" type="Node2D" parent="UI"]
 position = Vector2(170, 170)
 script = ExtResource("6_344ge")
-bounds = 100.0
+bounds = 80.0
 icon = ExtResource("7_ynf5e")
 prefix = "position"
 
@@ -71,6 +74,25 @@ prefix = "position"
 texture = ExtResource("6_21xkr")
 
 [node name="Virtual Joystick" parent="UI" instance=ExtResource("5_kry3j")]
+offset_left = 86.0
+offset_top = -391.0
+offset_right = 386.0
+offset_bottom = -91.0
+
+[node name="Base" parent="UI/Virtual Joystick" index="0"]
+offset_left = -129.0
+offset_top = -129.0
+offset_right = 129.0
+offset_bottom = 129.0
+texture = ExtResource("9_d1ilt")
+
+[node name="Tip" parent="UI/Virtual Joystick/Base" index="0"]
+pivot_offset = Vector2(75, 75)
+texture = ExtResource("10_6iyac")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="UI"]
-position = Vector2(1595, 939)
+position = Vector2(1592, 791)
+texture_normal = ExtResource("9_ynf5e")
+action = "attack"
+
+[editable path="UI/Virtual Joystick"]

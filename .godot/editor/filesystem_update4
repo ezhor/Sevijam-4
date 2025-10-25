@@ -12,3 +12,5 @@ res://Scripts/UI/MapIcon.gd
 res://Scenes/UI/map_icon.tscn
 res://Scripts/AbstractPlayer.gd
 res://Animations/character.tres
+res://Scenes/objects/bounds_manager.tscn
+res://Scripts/PlayerAttack.gd

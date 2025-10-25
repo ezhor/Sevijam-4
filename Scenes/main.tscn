@@ -26,9 +26,32 @@ tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAA
 tile_set = SubResource("TileSet_jjvhh")
 
 [node name="Hair" type="Node2D" parent="Floor"]
+position = Vector2(-2000, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/Hair"]
 texture = ExtResource("2_jjvhh")
+offset = Vector2(0, -500)
+
+[node name="Hair2" type="Node2D" parent="Floor"]
+position = Vector2(2000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor/Hair2"]
+texture = ExtResource("2_jjvhh")
+offset = Vector2(0, -500)
+
+[node name="Hair3" type="Node2D" parent="Floor"]
+position = Vector2(0, 2000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor/Hair3"]
+texture = ExtResource("2_jjvhh")
+offset = Vector2(0, -500)
+
+[node name="Hair4" type="Node2D" parent="Floor"]
+position = Vector2(0, -2000)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor/Hair4"]
+texture = ExtResource("2_jjvhh")
+offset = Vector2(0, -500)
 
 [node name="EnemiesManager" type="Node2D" parent="."]
 script = ExtResource("1_jjgbg")

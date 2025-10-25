@@ -1,7 +1,10 @@
 res://Scenes/objects/connection.tscn::a4049ab68c24ddc4609bdf149d0a4bba::1761383103::res://.godot/exported/133200997/export-47b435be4125473e5d095b505f67af00-connection.scn
-res://Scenes/objects/player.tscn::f52e93cf2945afa178669c6f5d25a361::1761403742::res://.godot/exported/133200997/export-3ea31410999eae0ce307fa28511f5cb3-player.scn
-res://Scenes/main.tscn::e674c62c2c5843ee7be87eb980b3f436::1761403542::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
+res://Scenes/objects/player.tscn::81fc73be7968006fd1da8a742b4877e8::1761409590::res://.godot/exported/133200997/export-3ea31410999eae0ce307fa28511f5cb3-player.scn
+res://Scenes/main.tscn::b619c57ef101019289cc3ef5a490d586::1761409098::res://.godot/exported/133200997/export-2ddd04d543d5858e7f20c9299a8b5096-main.scn
 res://Scenes/objects/identity_manager.tscn::2c29c7243c9f20b2e1ad16f6a6942546::1761399424::res://.godot/exported/133200997/export-f1d73225f8b0deca8faafd5faa8283dd-identity_manager.scn
-res://Scenes/objects/enemy.tscn::2dda3c72b938b79de16f021418720958::1761399214::res://.godot/exported/133200997/export-b8ad74f388048253d031addc40e86211-enemy.scn
+res://Scenes/objects/enemy.tscn::0030dcc852adf4c3d9addf517ebeabe7::1761409406::res://.godot/exported/133200997/export-b8ad74f388048253d031addc40e86211-enemy.scn
 res://addons/virtual_joystick/test/test.tscn::60299157fb2f850aa88796735369d4c0::1761403194::res://.godot/exported/133200997/export-65fc1102b221e3c86f8828aab5faf636-test.scn
 res://addons/virtual_joystick/virtual_joystick_scene.tscn::c47f4bc864545c023e725d20482526d6::1761403194::res://.godot/exported/133200997/export-4fefb2d1c978e429fe9cfeba8aa59129-virtual_joystick_scene.scn
+res://Animations/character.tres::dd21d420f568fdce374f8bc4aeebbb41::1761409590::res://.godot/exported/133200997/export-e322144f8cfe5292c45de90eb4ebfe5b-character.res
+res://Scenes/objects/bounds_manager.tscn::b16e488a63cbbb05a2529729c006fa14::1761405541::res://.godot/exported/133200997/export-43bea612501daf25f76690079f3d77c2-bounds_manager.scn
+res://Scenes/UI/map_icon.tscn::f4b8c9a4ee62e67b135ba5880f60c7e1::1761408198::res://.godot/exported/133200997/export-77af42044de8fb42fe25c65fa7979ce2-map_icon.scn

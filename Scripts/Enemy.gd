@@ -12,9 +12,11 @@ func _on_prefixed_data(data: String):
 		else:
 			sprite.play("idle")
 			
-		if direction.x < 0:
-			sprite.flip_h = true
-		elif direction.x > 0:
+		if direction.x > 0:
 			sprite.flip_h = false
+			sprite.offset.x = offset
+		elif direction.x < 0:
+			sprite.flip_h = true
+			sprite.offset.x = -offset
 		
 		position = new_position

@@ -1,13 +1,21 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://c4xj02nwo6n3t"]
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://c4xj02nwo6n3t"]
 
 [ext_resource type="Texture2D" uid="uid://3x4nmjugwscm" path="res://Sprites/Character/idle3.png" id="1_a6ot6"]
+[ext_resource type="Texture2D" uid="uid://cc1ya1a5l6def" path="res://Sprites/Character/attack1.png" id="1_yyed5"]
 [ext_resource type="Texture2D" uid="uid://bnkhltnoaydoc" path="res://Sprites/Character/idle4.png" id="2_baogf"]
+[ext_resource type="Texture2D" uid="uid://w8enq2cmahx0" path="res://Sprites/Character/attack2.png" id="2_loim7"]
 [ext_resource type="Texture2D" uid="uid://brhvado5lwofu" path="res://Sprites/Character/run1.png" id="3_e8ntx"]
 [ext_resource type="Texture2D" uid="uid://ciu0jha5j4ad1" path="res://Sprites/Character/run2.png" id="4_faimc"]
 
 [resource]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yyed5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_loim7")
+}],
 "loop": true,
 "name": &"attack",
 "speed": 5.0

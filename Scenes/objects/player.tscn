@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bemol3e8ab0ey"]
+[gd_scene load_steps=4 format=3 uid="uid://bemol3e8ab0ey"]
 
 [ext_resource type="Script" uid="uid://dnp7wwvah536j" path="res://Scripts/Player.gd" id="1_cvnsp"]
 [ext_resource type="SpriteFrames" uid="uid://c4xj02nwo6n3t" path="res://Animations/character.tres" id="2_718o8"]
+[ext_resource type="Script" uid="uid://bxpfyc5384pct" path="res://Scripts/PlayerAttack.gd" id="3_knc1s"]
 
-[node name="Player" type="Node2D" node_paths=PackedStringArray("sprite", "timer")]
+[node name="Player" type="Node2D" node_paths=PackedStringArray("attackAbility", "sprite", "timer")]
 script = ExtResource("1_cvnsp")
 speed = 500.0
+attackAbility = NodePath("AttackAbility")
 sprite = NodePath("Sprite2D")
 prefix = "position"
 timer = NodePath("MovementTimer")
@@ -22,3 +24,9 @@ animation = &"run"
 offset = Vector2(75, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AttackAbility" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(-2, 0)
+script = ExtResource("3_knc1s")
+sprite = NodePath("../Sprite2D")
+prefix = "attack"

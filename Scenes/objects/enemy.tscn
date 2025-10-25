@@ -11,3 +11,4 @@ prefix = "position"
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_yc07q")
 animation = &"idle"
+offset = Vector2(75, 0)

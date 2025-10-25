@@ -38,6 +38,6 @@ func _process(_delta):
 		set_process(false)
 
 func send_data(data: String):
-	socket.send_text(data)
+	socket.send_text(str(IdentityManager.identity) + "@" + data)
 	
 signal _on_data(data: String)

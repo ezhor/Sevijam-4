@@ -7,3 +7,6 @@ res://Scripts/PlayersManager.gd
 res://Scripts/Player.gd
 res://Scripts/IdentityManager.gd
 res://Scenes/objects/identity_manager.tscn
+res://Scripts/Enemy.gd
+res://Scripts/AbstractPlayer.gd
+res://Scenes/objects/enemy.tscn

@@ -4,7 +4,7 @@ extends AbstractPlayer
 @export var speed: float = 1
 @export var bounds: int = 0
 
-var offset: int
+var offset: float
 
 func _ready() -> void:
 	super._ready()

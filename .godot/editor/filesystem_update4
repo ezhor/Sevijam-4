@@ -17,3 +17,8 @@ res://Scripts/PlayerAttack.gd
 res://Scripts/Connection.gd
 res://Scripts/EnemyAttack.gd
 res://Scripts/NetworkObject.gd
+res://Shaders/character.tres
+res://Scenes/UI/energy_bar.tscn
+res://Scripts/UI/StatBar.gd
+res://Scripts/UI/EnergyBar.gd
+res://Scripts/UI/HealthBar.gd

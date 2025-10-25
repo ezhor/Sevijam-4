@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dqjpsb701d25l"]
+[gd_scene load_steps=18 format=4 uid="uid://dqjpsb701d25l"]
 
 [ext_resource type="Script" uid="uid://mm3y2dhwin1m" path="res://Scripts/EnemiesManager.gd" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://dkr0hu74buj3x" path="res://Scenes/objects/enemy.tscn" id="2_bo1nx"]
@@ -9,10 +9,9 @@
 [ext_resource type="Script" uid="uid://bxbexi25vvgnl" path="res://Scripts/UI/Map.gd" id="6_344ge"]
 [ext_resource type="PackedScene" uid="uid://b66u1uvcq6wc6" path="res://Scenes/UI/map_icon.tscn" id="7_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://clg17lnxpjagd" path="res://Sprites/UI/joystik-1.png" id="9_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://cvu8plgn3mvol" path="res://Scenes/UI/energy_bar.tscn" id="9_wsu2k"]
 [ext_resource type="Texture2D" uid="uid://d26uct5vkjo1e" path="res://Sprites/UI/Attack.png" id="9_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://b8tptbuxhacqn" path="res://Sprites/UI/joystik-2.png" id="10_6iyac"]
-[ext_resource type="Texture2D" uid="uid://cc2ay877dwb5f" path="res://Sprites/UI/energy-barr-1.png" id="10_k12tt"]
-[ext_resource type="Texture2D" uid="uid://dgh7buj2dqxr6" path="res://Sprites/UI/energy-barr-2.png" id="11_h1bgf"]
 [ext_resource type="Texture2D" uid="uid://tlypkr6uf25o" path="res://Sprites/UI/Attack-1.png" id="12_6iyac"]
 [ext_resource type="Texture2D" uid="uid://lbaiovu5l6cq" path="res://Sprites/UI/health-barr-1.png" id="13_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://6yylo1bw28qa" path="res://Sprites/UI/health-barr-2.png" id="14_wsu2k"]
@@ -88,15 +87,7 @@ value = 80.0
 texture_under = ExtResource("13_jkdf5")
 texture_progress = ExtResource("14_wsu2k")
 
-[node name="Energy Bar" type="TextureProgressBar" parent="UI"]
-offset_left = 317.0
-offset_top = 126.0
-offset_right = 765.0
-offset_bottom = 204.0
-scale = Vector2(0.8, 0.8)
-value = 80.0
-texture_under = ExtResource("10_k12tt")
-texture_progress = ExtResource("11_h1bgf")
+[node name="Energy Bar" parent="UI" instance=ExtResource("9_wsu2k")]
 
 [node name="Virtual Joystick" parent="UI" instance=ExtResource("5_kry3j")]
 offset_left = 85.0

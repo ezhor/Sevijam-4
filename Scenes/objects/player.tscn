@@ -29,4 +29,6 @@ offset = Vector2(75, 0)
 position = Vector2(-2, 0)
 script = ExtResource("3_knc1s")
 sprite = NodePath("../Sprite2D")
+energy_consumption = 50.0
+energy_recovery = 25.0
 prefix = "attack"

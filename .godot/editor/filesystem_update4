@@ -5,3 +5,8 @@ res://Scenes/main.tscn
 res://Scenes/objects/player.tscn
 res://Scenes/objects/identity_manager.tscn
 res://Scripts/Player.gd
+res://Scripts/IdentityManager.gd
+res://Scripts/UI/Map.gd
+res://Scripts/BoundsManager.gd
+res://Scripts/UI/MapIcon.gd
+res://Scenes/UI/map_icon.tscn

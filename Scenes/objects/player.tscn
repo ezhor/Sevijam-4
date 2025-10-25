@@ -1,13 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://bemol3e8ab0ey"]
 
 [ext_resource type="Script" uid="uid://dnp7wwvah536j" path="res://Scripts/Player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://ccpx6px5wm0k6" path="res://Sprites/prueba.png" id="2_718o8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_87muf"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Player" type="Node2D" node_paths=PackedStringArray("sprite", "timer")]
 script = ExtResource("1_cvnsp")
 speed = 500.0
-bounds = 1000
-sprite = NodePath("Sprite2D")
+sprite = NodePath("")
 prefix = "position"
 timer = NodePath("MovementTimer")
 metadata/_custom_type_script = "uid://dnp7wwvah536j"
@@ -16,9 +22,10 @@ metadata/_custom_type_script = "uid://dnp7wwvah536j"
 wait_time = 0.05
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
-texture = ExtResource("2_718o8")
+sprite_frames = SubResource("SpriteFrames_87muf")
+animation = &"idle"
 offset = Vector2(75, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]

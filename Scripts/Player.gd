@@ -2,7 +2,6 @@ class_name Player
 extends AbstractPlayer
 
 @export var speed: float = 1
-@export var bounds: int = 0
 
 var offset: float
 
@@ -21,8 +20,8 @@ func _physics_process(delta: float) -> void:
 		sprite.offset.x = -offset
 		
 	position = position + direction * speed * delta
-	if position.length() > bounds:
-		position = position.normalized() * bounds
+	if position.length() > BoundsManager.bounds:
+		position = position.normalized() * BoundsManager.bounds
 	send_data(str(position))
 
 func _on_prefixed_data(_data: String):

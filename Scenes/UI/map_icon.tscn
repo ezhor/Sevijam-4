@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b66u1uvcq6wc6"]
+
+[ext_resource type="Texture2D" uid="uid://dn3po8nsxy76n" path="res://Sprites/UI/people.png" id="1_tv8kb"]
+[ext_resource type="Script" uid="uid://dvh0yo2am6cot" path="res://Scripts/UI/MapIcon.gd" id="2_6n00y"]
+
+[node name="MapIcon" type="Sprite2D" node_paths=PackedStringArray("sprite")]
+texture = ExtResource("1_tv8kb")
+script = ExtResource("2_6n00y")
+sprite = NodePath(".")
+prefix = "enemy"

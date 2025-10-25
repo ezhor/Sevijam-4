@@ -1,8 +1,9 @@
+CanvasLayer
+Sprite2D
+Node2D
 Camera2D
 TextureProgressBar
 TileMapLayer
-Node2D
-Sprite2D
 Timer
 TileMap
 Player

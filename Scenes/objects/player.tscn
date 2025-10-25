@@ -6,6 +6,7 @@
 [node name="Player" type="Node2D" node_paths=PackedStringArray("sprite", "timer")]
 script = ExtResource("1_cvnsp")
 speed = 500.0
+bounds = 1000
 sprite = NodePath("Sprite2D")
 prefix = "position"
 timer = NodePath("MovementTimer")
@@ -18,5 +19,6 @@ autostart = true
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
 texture = ExtResource("2_718o8")
+offset = Vector2(75, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]

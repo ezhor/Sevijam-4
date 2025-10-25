@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://dqjpsb701d25l"]
+[gd_scene load_steps=6 format=4 uid="uid://dqjpsb701d25l"]
+
+[ext_resource type="Script" uid="uid://mm3y2dhwin1m" path="res://Scripts/EnemiesManager.gd" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://dkr0hu74buj3x" path="res://Scenes/objects/enemy.tscn" id="2_bo1nx"]
+[ext_resource type="Texture2D" uid="uid://0ajpro2yct2k" path="res://Sprites/Enviroment/tile_pelo_1.png" id="3_8gbba"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
+texture = ExtResource("3_8gbba")
+texture_region_size = Vector2i(664, 664)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jjvhh"]
+tile_size = Vector2i(664, 664)
+sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [node name="Node2D" type="Node2D"]
+
+[node name="EnemiesManager" type="Node2D" parent="."]
+script = ExtResource("1_jjgbg")
+enemy = ExtResource("2_bo1nx")
+prefix = "enemy"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD//wAAAAAAAAAAAAD/////AAAAAAAAAAAAAP//AAAAAAAAAAADAP//AAAAAAAAAAACAP//AAAAAAAAAAABAP//AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_jjvhh")

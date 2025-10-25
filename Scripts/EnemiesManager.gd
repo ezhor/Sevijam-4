@@ -2,7 +2,10 @@ class_name EnemiesManager
 extends NetworkObject
 
 @export var enemy: PackedScene
-@export var colors:Array[Color]
 
 func _on_prefixed_data(data: String):
-	pass
+	var instance: Enemy = enemy.instantiate() as Enemy
+	var identity: int = int(data.split("@")[2])
+	
+	instance.initialize(identity)
+	add_child(instance)

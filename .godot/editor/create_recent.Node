@@ -1,6 +1,6 @@
-Sprite2D
-Node2D
-Timer
 TileMapLayer
+Node2D
+Sprite2D
+Timer
 TileMap
 Player

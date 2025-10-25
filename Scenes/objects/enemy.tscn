@@ -6,7 +6,7 @@
 [node name="enemy" type="Node2D" node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_shvg2")
 sprite = NodePath("Sprite2D")
-prefix = "enemy"
+prefix = "position"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_yc07q")

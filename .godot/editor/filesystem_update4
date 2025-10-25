@@ -3,3 +3,7 @@ res://Scripts/NetworkObject.gd
 res://Scenes/objects/connection.tscn
 res://Scripts/Connection.gd
 res://Scenes/main.tscn
+res://Scripts/PlayersManager.gd
+res://Scripts/Player.gd
+res://Scripts/IdentityManager.gd
+res://Scenes/objects/identity_manager.tscn

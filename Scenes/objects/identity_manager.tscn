@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cma2lk66yuklx"]
+
+[ext_resource type="Script" uid="uid://b8qq5pg3sbjon" path="res://Scripts/IdentityManager.gd" id="1_hn3w2"]
+[ext_resource type="PackedScene" uid="uid://bemol3e8ab0ey" path="res://Scenes/objects/player.tscn" id="2_2ggxx"]
+
+[node name="IdentityManager" type="Node2D"]
+script = ExtResource("1_hn3w2")
+player = ExtResource("2_2ggxx")
+colors = Array[Color]([Color(1, 0, 0, 1), Color(0, 1, 0, 1), Color(0, 0, 1, 1), Color(1, 1, 0, 1), Color(1, 0, 1, 1), Color(0, 1, 1, 1)])
+prefix = "identity"

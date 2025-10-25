@@ -1,6 +1,6 @@
 extends Node
 
-@export var websocket_url: String = "ws://187.33.147.149:8080"
+@export var websocket_url: String = "wss://b06facc6-22ef-4f39-bd22-884ad04bcaa4.clouding.host:8080"
 @export var player: PackedScene
 
 # Our WebSocketClient instance.

@@ -1,6 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761414755
-export_presets.cfg::TextFile::-1::1761414755::0::1::::<><><>0<>0<><>::
+::res://::1761416119
+export_presets.cfg::TextFile::-1::1761416119::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::1760301958326736005::1761069495::1761330404::1::::<><><>0<>0<>b5de4695a5006d74f4b91368c274a6d5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ::res://addons/::1761404533
 map-base.png::CompressedTexture2D::390583547644582290::1761404533::1761404533::1::::<><><>0<>0<>8423ec27e689456e66e06d50135b3b3d<>res://.godot/imported/map-base.png-98c14eef484c293e5b14ca1661d1f95e.ctex::
@@ -25,8 +25,8 @@ joystick_tip.png::CompressedTexture2D::3132432681801126628::1761403194::17614031
 joystick_tip_arrows.png::CompressedTexture2D::8548255698028078709::1761403194::1761403194::1::::<><><>0<>0<>9ee2cf5e411d09fc41cb0803aa25ff4c<>res://.godot/imported/joystick_tip_arrows.png-cd5fb367005f4e3e79a192d69a489560.ctex::
 ::res://Animations/::1761411429
 character.tres::SpriteFrames::6856391058247470423::1761411429::0::1::::<><><>0<>0<><>::uid://3x4nmjugwscm::::res://Sprites/Character/idle3.png<>uid://cc1ya1a5l6def::::res://Sprites/Character/attack1.png<>uid://bnkhltnoaydoc::::res://Sprites/Character/idle4.png<>uid://w8enq2cmahx0::::res://Sprites/Character/attack2.png<>uid://brhvado5lwofu::::res://Sprites/Character/run1.png<>uid://ciu0jha5j4ad1::::res://Sprites/Character/run2.png
-::res://Scenes/::1761415497
-main.tscn::PackedScene::8301805951384016331::1761415497::0::1::::<><><>0<>0<><>::uid://mm3y2dhwin1m::::res://Scripts/EnemiesManager.gd<>uid://dkr0hu74buj3x::::res://Scenes/objects/enemy.tscn<>uid://l7h7b5k0xhon::::res://Sprites/Enviroment/pelo0033.png<>uid://0ajpro2yct2k::::res://Sprites/Enviroment/tile_pelo_1.png<>uid://dmr0fcamx7t56::::res://addons/virtual_joystick/virtual_joystick_scene.tscn<>uid://bgrv5wypxll5r::::res://Sprites/UI/map-base.png<>uid://bxbexi25vvgnl::::res://Scripts/UI/Map.gd<>uid://b66u1uvcq6wc6::::res://Scenes/UI/map_icon.tscn<>uid://d26uct5vkjo1e::::res://Sprites/UI/Attack.png
+::res://Scenes/::1761416292
+main.tscn::PackedScene::8301805951384016331::1761416292::0::1::::<><><>0<>0<><>::uid://mm3y2dhwin1m::::res://Scripts/EnemiesManager.gd<>uid://dkr0hu74buj3x::::res://Scenes/objects/enemy.tscn<>uid://l7h7b5k0xhon::::res://Sprites/Enviroment/pelo0033.png<>uid://0ajpro2yct2k::::res://Sprites/Enviroment/tile_pelo_1.png<>uid://dmr0fcamx7t56::::res://addons/virtual_joystick/virtual_joystick_scene.tscn<>uid://bgrv5wypxll5r::::res://Sprites/UI/map-base.png<>uid://bxbexi25vvgnl::::res://Scripts/UI/Map.gd<>uid://b66u1uvcq6wc6::::res://Scenes/UI/map_icon.tscn<>uid://clg17lnxpjagd::::res://Sprites/UI/joystik-1.png<>uid://d26uct5vkjo1e::::res://Sprites/UI/Attack.png<>uid://b8tptbuxhacqn::::res://Sprites/UI/joystik-2.png
 ::res://Scenes/objects/::1761414745
 bounds_manager.tscn::PackedScene::848062996713399889::1761411873::0::1::::<><><>0<>0<><>::uid://ddvihdqfyw5io::::res://Scripts/BoundsManager.gd
 connection.tscn::PackedScene::714665066353500523::1761383103::0::1::::<><><>0<>0<><>::uid://dorrprbns5uvd::::res://Scripts/Connection.gd<>uid://bemol3e8ab0ey::::res://Scenes/objects/player.tscn
@@ -60,7 +60,8 @@ run2.png::CompressedTexture2D::5377174037575643064::1761409289::1761409338::1:::
 ::res://Sprites/Enviroment/::1761403006
 pelo0033.png::CompressedTexture2D::838619631858748813::1761403006::1761403006::1::::<><><>0<>0<>c1653015bf3d2080286e09dbc82954b8<>res://.godot/imported/pelo0033.png-64e86c11c0412d9662dc4d4823436e66.ctex::
 tile_pelo_1.png::CompressedTexture2D::1755295246577425500::1761385284::1761385284::1::::<><><>0<>0<>80a3ec24f820d29ae8e09665642cd979<>res://.godot/imported/tile_pelo_1.png-f11086ba59705eae503dbf2a280e1b86.ctex::
-::res://Sprites/UI/::1761415553
+::res://Sprites/UI/::1761416318
+Attack-1.png::CompressedTexture2D::1357780732082871550::1761416318::1761416318::1::::<><><>0<>0<>3244e804cd671164428306cb09f575e7<>res://.godot/imported/Attack-1.png-d424a88785cf3d22ee41dbf062db6de6.ctex::
 Attack.png::CompressedTexture2D::9119575496380832952::1761415399::1761415400::1::::<><><>0<>0<>287b09dba44fface93606c7bc8c06f51<>res://.godot/imported/Attack.png-91e8d6c8cd9839ccba72b21aa4bcadfe.ctex::
 joystik-1.png::CompressedTexture2D::5558941300050524455::1761415548::1761415548::1::::<><><>0<>0<>d731c040f01ac92e3faf9f4fefddb07d<>res://.godot/imported/joystik-1.png-33e3092dcfad2612437c34e02e294b96.ctex::
 joystik-2.png::CompressedTexture2D::4742820470524805893::1761415553::1761415554::1::::<><><>0<>0<>6852906de72201cafb309f3d5a6ba38f<>res://.godot/imported/joystik-2.png-76564fa37c4661b172f776eb4b3ee10c.ctex::

@@ -10,3 +10,5 @@ res://Scripts/UI/Map.gd
 res://Scripts/BoundsManager.gd
 res://Scripts/UI/MapIcon.gd
 res://Scenes/UI/map_icon.tscn
+res://Scripts/AbstractPlayer.gd
+res://Animations/character.tres

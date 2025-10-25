@@ -1,12 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkr0hu74buj3x"]
 
 [ext_resource type="Script" uid="uid://crlp80e6vt7to" path="res://Scripts/Enemy.gd" id="1_shvg2"]
-[ext_resource type="Texture2D" uid="uid://ccpx6px5wm0k6" path="res://Sprites/prueba.png" id="2_yc07q"]
+[ext_resource type="SpriteFrames" uid="uid://c4xj02nwo6n3t" path="res://Animations/character.tres" id="2_yc07q"]
 
 [node name="enemy" type="Node2D" node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_shvg2")
 sprite = NodePath("Sprite2D")
 prefix = "position"
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_yc07q")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_yc07q")
+animation = &"idle"

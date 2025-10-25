@@ -7,7 +7,7 @@ var offset: float
 
 func _ready() -> void:
 	super._ready()
-	offset = sprite.offset.x
+	offset = sprite.offset.x	
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -18,6 +18,11 @@ func _physics_process(delta: float) -> void:
 	elif direction.x < 0:
 		sprite.flip_h = true
 		sprite.offset.x = -offset
+		
+	if direction.length() > 0:
+		sprite.play("run")
+	else:
+		sprite.play("idle")
 		
 	position = position + direction * speed * delta
 	if position.length() > BoundsManager.bounds:

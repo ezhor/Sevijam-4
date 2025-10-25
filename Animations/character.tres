@@ -1,0 +1,36 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://c4xj02nwo6n3t"]
+
+[ext_resource type="Texture2D" uid="uid://3x4nmjugwscm" path="res://Sprites/Character/idle3.png" id="1_a6ot6"]
+[ext_resource type="Texture2D" uid="uid://bnkhltnoaydoc" path="res://Sprites/Character/idle4.png" id="2_baogf"]
+[ext_resource type="Texture2D" uid="uid://brhvado5lwofu" path="res://Sprites/Character/run1.png" id="3_e8ntx"]
+[ext_resource type="Texture2D" uid="uid://ciu0jha5j4ad1" path="res://Sprites/Character/run2.png" id="4_faimc"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_a6ot6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_baogf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e8ntx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_faimc")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]

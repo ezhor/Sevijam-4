@@ -2,7 +2,7 @@
 class_name AbstractPlayer
 extends NetworkObject
 
-@export var sprite: Sprite2D
+@export var sprite: AnimatedSprite2D
 
 var identity: int = -1
 

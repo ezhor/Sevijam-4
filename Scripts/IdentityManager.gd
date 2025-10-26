@@ -18,6 +18,6 @@ func _on_prefixed_data(data: String):
 	_on_identity_ready.emit()
 	
 func spawn_point():
-	return spawn_points[identity]
+	return spawn_points[playerReference.team()]
 
 signal _on_identity_ready()

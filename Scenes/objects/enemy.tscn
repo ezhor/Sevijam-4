@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dkr0hu74buj3x"]
+[gd_scene load_steps=5 format=3 uid="uid://dkr0hu74buj3x"]
 
 [ext_resource type="Script" uid="uid://crlp80e6vt7to" path="res://Scripts/Enemy.gd" id="1_shvg2"]
 [ext_resource type="SpriteFrames" uid="uid://c4xj02nwo6n3t" path="res://Animations/character.tres" id="2_yc07q"]
 [ext_resource type="Script" uid="uid://8825dml3wme4" path="res://Scripts/EnemyAttack.gd" id="3_tlncp"]
 
-[node name="enemy" type="Node2D" node_paths=PackedStringArray("attackAbility", "sprite")]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tlncp"]
+radius = 69.79
+height = 186.13
+
+[node name="enemy" type="RigidBody2D" node_paths=PackedStringArray("attackAbility", "sprite")]
 script = ExtResource("1_shvg2")
 attackAbility = NodePath("AttackAbility")
 sprite = NodePath("Sprite2D")
@@ -20,3 +24,8 @@ offset = Vector2(75, 0)
 script = ExtResource("3_tlncp")
 sprite = NodePath("../Sprite2D")
 prefix = "attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1000
+position = Vector2(0, 18.415)
+shape = SubResource("CapsuleShape2D_tlncp")

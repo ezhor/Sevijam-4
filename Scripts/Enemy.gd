@@ -17,9 +17,10 @@ func _on_prefixed_data(data: String):
 			
 		if direction.x > 0:
 			sprite.flip_h = false
-			sprite.offset.x = offset
+			sprite.offset.x = 70
 		elif direction.x < 0:
 			sprite.flip_h = true
-			sprite.offset.x = -offset
+			sprite.offset.x = -70
+		rotation = 0
 		
 		position = new_position

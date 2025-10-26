@@ -8,7 +8,7 @@ func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if direction.x > 0:
-		scale.x = 1		
+		scale.x = 1
 	elif direction.x < 0:
 		scale.x = -1
 	rotation = 0

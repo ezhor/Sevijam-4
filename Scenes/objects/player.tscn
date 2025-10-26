@@ -12,9 +12,7 @@ size = Vector2(125, 41)
 radius = 69.79
 height = 186.13
 
-[node name="Player" type="RigidBody2D" node_paths=PackedStringArray("attackAbility", "sprite", "timer")]
-gravity_scale = 0.0
-lock_rotation = true
+[node name="Player" type="StaticBody2D" node_paths=PackedStringArray("attackAbility", "sprite", "timer")]
 script = ExtResource("1_cvnsp")
 speed = 500.0
 attackAbility = NodePath("AttackAbility")
@@ -30,7 +28,7 @@ energy_consumption = 50.0
 energy_recovery = 30.0
 attack_range = NodePath("Attack Range")
 attack_timer = NodePath("Timer")
-player = NodePath("..")
+player = NodePath("")
 damage_ability = NodePath("../DamageAbility")
 prefix = "attack"
 

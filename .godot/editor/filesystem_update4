@@ -5,3 +5,4 @@ res://Scripts/UI/HealthBar.gd
 res://Scripts/PlayerDamage.gd
 res://Scenes/objects/identity_manager.tscn
 res://Scenes/main.tscn
+res://Scripts/Player.gd

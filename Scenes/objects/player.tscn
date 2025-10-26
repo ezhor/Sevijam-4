@@ -11,20 +11,24 @@ size = Vector2(125, 41)
 radius = 69.79
 height = 186.13
 
-[node name="Player" type="RigidBody2D" node_paths=PackedStringArray("attackAbility", "sprite")]
+[node name="Player" type="RigidBody2D" node_paths=PackedStringArray("attackAbility", "sprite", "timer")]
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_cvnsp")
 speed = 500.0
 attackAbility = NodePath("AttackAbility")
 sprite = NodePath("Sprite2D")
+prefix = "position"
+timer = NodePath("MovementTimer")
 
-[node name="AttackAbility" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
+[node name="AttackAbility" type="Node2D" parent="." node_paths=PackedStringArray("sprite", "attack_range", "attack_timer")]
 position = Vector2(-2, 0)
 script = ExtResource("3_knc1s")
 sprite = NodePath("../Sprite2D")
 energy_consumption = 50.0
 energy_recovery = 30.0
+attack_range = NodePath("Attack Range")
+attack_timer = NodePath("Timer")
 prefix = "attack"
 
 [node name="Attack Range" type="Area2D" parent="AttackAbility"]
@@ -35,6 +39,10 @@ z_index = 1000
 position = Vector2(-7, 51)
 shape = SubResource("RectangleShape2D_knc1s")
 debug_color = Color(0.7, 0, 0, 0.41960785)
+
+[node name="Timer" type="Timer" parent="AttackAbility"]
+wait_time = 0.333
+autostart = true
 
 [node name="MovementTimer" type="Timer" parent="."]
 wait_time = 0.05

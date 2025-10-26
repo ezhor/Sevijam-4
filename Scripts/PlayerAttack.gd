@@ -4,10 +4,18 @@ extends NetworkObject
 @export var sprite: AnimatedSprite2D
 @export var energy_consumption: float
 @export var energy_recovery: float
-@export var range: Area2D
+@export var attack_range: Area2D
+@export var attack_timer: Timer
 
 var attacking: bool
 var energy: EnergyBar
+var detected_bodies: Array[Node2D]
+
+func _ready() -> void:
+	super._ready()
+	attack_timer.timeout.connect(_on_attack_timer)
+	attack_range.body_entered.connect(_on_body_entered)
+	attack_range.body_exited.connect(_on_body_exited)
 
 func _input(event):
 	if event.is_action_pressed("attack") && energy.progressBar.value > 20:
@@ -27,6 +35,20 @@ func _process(delta: float) -> void:
 	if energy.progressBar.value < 10:
 		attacking = false
 		send_data_immediate("disable")
+
+func _on_attack_timer():
+	if attacking:
+		for body in detected_bodies:
+			var enemy: Enemy = body as Enemy
+			print(enemy) 
+
+func _on_body_entered(body: Node2D):
+	detected_bodies.push_back(body)
+	print(detected_bodies)
+
+func _on_body_exited(body: Node2D):
+	detected_bodies.remove_at(detected_bodies.find(body))
+	print(detected_bodies)
 
 func _on_prefixed_data(_data: String):
 	pass

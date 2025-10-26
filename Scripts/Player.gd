@@ -24,5 +24,6 @@ func _physics_process(delta: float) -> void:
 		position = position.normalized() * BoundsManager.bounds
 	send_data(str(position))
 
+
 func _on_prefixed_data(_data: String):
 	pass

@@ -26,6 +26,7 @@ tile_size = Vector2i(664, 664)
 sources/0 = SubResource("TileSetAtlasSource_8gbba")
 
 [node name="Main" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Floor" type="TileMapLayer" parent="."]
 position = Vector2(15, -7)
@@ -33,30 +34,42 @@ tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAA
 tile_set = SubResource("TileSet_jjvhh")
 
 [node name="Hair" type="Node2D" parent="Floor"]
-position = Vector2(-2000, 0)
+position = Vector2(-2000, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/Hair"]
+z_index = 1
 texture = ExtResource("2_jjvhh")
 offset = Vector2(0, -500)
 
 [node name="Hair2" type="Node2D" parent="Floor"]
-position = Vector2(2000, 0)
+position = Vector2(2000, 2)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/Hair2"]
+z_index = 1
 texture = ExtResource("2_jjvhh")
 offset = Vector2(0, -500)
 
 [node name="Hair3" type="Node2D" parent="Floor"]
-position = Vector2(0, 2000)
+position = Vector2(0, 2002)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/Hair3"]
+z_index = 1
 texture = ExtResource("2_jjvhh")
 offset = Vector2(0, -500)
 
 [node name="Hair4" type="Node2D" parent="Floor"]
-position = Vector2(0, -2000)
+position = Vector2(0, -1998)
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor/Hair4"]
+z_index = 1
+texture = ExtResource("2_jjvhh")
+offset = Vector2(0, -500)
+
+[node name="Hair5" type="Node2D" parent="Floor"]
+position = Vector2(33, 221)
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor/Hair5"]
+z_index = 1
 texture = ExtResource("2_jjvhh")
 offset = Vector2(0, -500)
 

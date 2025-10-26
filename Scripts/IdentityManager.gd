@@ -12,7 +12,7 @@ func _on_prefixed_data(data: String):
 	
 	playerReference = player.instantiate() as Player	
 	playerReference.initialize(identity)
-	add_child(playerReference)
+	get_tree().get_root().get_node("Main").add_child(playerReference)
 	_on_identity_ready.emit()
 
 signal _on_identity_ready()

@@ -13,4 +13,7 @@ func _ready() -> void:
 
 func initialize(new_identity: int):
 	identity = new_identity
-	sprite.modulate = IdentityManager.colors[new_identity]
+	sprite.modulate = IdentityManager.colors[team()]
+
+func team():
+	return identity % 2

@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 	else:
 		energy.progressBar.value += energy_recovery * delta
 	
-	if energy.progressBar.value < 10:
+	if energy.progressBar.value < 20:
 		attacking = false
 		send_data_immediate("disable")
 

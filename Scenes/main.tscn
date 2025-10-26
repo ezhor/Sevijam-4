@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://dqjpsb701d25l"]
+[gd_scene load_steps=17 format=4 uid="uid://dqjpsb701d25l"]
 
 [ext_resource type="Script" uid="uid://mm3y2dhwin1m" path="res://Scripts/EnemiesManager.gd" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://dkr0hu74buj3x" path="res://Scenes/objects/enemy.tscn" id="2_bo1nx"]
@@ -8,13 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://bgrv5wypxll5r" path="res://Sprites/UI/map-base.png" id="6_21xkr"]
 [ext_resource type="Script" uid="uid://bxbexi25vvgnl" path="res://Scripts/UI/Map.gd" id="6_344ge"]
 [ext_resource type="PackedScene" uid="uid://b66u1uvcq6wc6" path="res://Scenes/UI/map_icon.tscn" id="7_ynf5e"]
+[ext_resource type="PackedScene" uid="uid://xomdiklftmc3" path="res://Scenes/UI/health_bar.tscn" id="8_jkdf5"]
 [ext_resource type="Texture2D" uid="uid://clg17lnxpjagd" path="res://Sprites/UI/joystik-1.png" id="9_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://cvu8plgn3mvol" path="res://Scenes/UI/energy_bar.tscn" id="9_wsu2k"]
 [ext_resource type="Texture2D" uid="uid://d26uct5vkjo1e" path="res://Sprites/UI/Attack.png" id="9_ynf5e"]
 [ext_resource type="Texture2D" uid="uid://b8tptbuxhacqn" path="res://Sprites/UI/joystik-2.png" id="10_6iyac"]
 [ext_resource type="Texture2D" uid="uid://tlypkr6uf25o" path="res://Sprites/UI/Attack-1.png" id="12_6iyac"]
-[ext_resource type="Texture2D" uid="uid://lbaiovu5l6cq" path="res://Sprites/UI/health-barr-1.png" id="13_jkdf5"]
-[ext_resource type="Texture2D" uid="uid://6yylo1bw28qa" path="res://Sprites/UI/health-barr-2.png" id="14_wsu2k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gbba"]
 texture = ExtResource("3_8gbba")
@@ -54,15 +53,7 @@ prefix = "position"
 [node name="Background" type="Sprite2D" parent="UI/Map"]
 texture = ExtResource("6_21xkr")
 
-[node name="Health Bar" type="TextureProgressBar" parent="UI"]
-offset_left = 312.0
-offset_top = 58.0
-offset_right = 760.0
-offset_bottom = 134.0
-scale = Vector2(0.8, 0.8)
-value = 80.0
-texture_under = ExtResource("13_jkdf5")
-texture_progress = ExtResource("14_wsu2k")
+[node name="Health Bar" parent="UI" instance=ExtResource("8_jkdf5")]
 
 [node name="Energy Bar" parent="UI" instance=ExtResource("9_wsu2k")]
 

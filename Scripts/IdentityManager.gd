@@ -20,5 +20,8 @@ func _on_prefixed_data(data: String):
 	
 func spawn_point() -> Vector2:
 	return spawn_points[playerReference.team()]
+	
+func respawn():
+	playerReference.position = spawn_point()
 
 signal _on_identity_ready()

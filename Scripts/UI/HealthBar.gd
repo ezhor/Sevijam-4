@@ -9,3 +9,6 @@ func _ready() -> void:
 	
 func damage():
 	progressBar.value -= 10
+	if progressBar.value <= 20:
+		progressBar.value = 100
+		IdentityManager.respawn()

@@ -18,7 +18,7 @@ func _on_prefixed_data(data: String):
 	playerReference.position = spawn_point()
 	_on_identity_ready.emit()
 	
-func spawn_point():
+func spawn_point() -> Vector2:
 	return spawn_points[playerReference.team()]
 
 signal _on_identity_ready()

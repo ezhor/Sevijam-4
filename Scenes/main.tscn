@@ -74,6 +74,7 @@ texture = ExtResource("2_jjvhh")
 offset = Vector2(0, -500)
 
 [node name="EnemiesManager" type="Node2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("1_jjgbg")
 enemy = ExtResource("2_bo1nx")
 prefix = "enemy"

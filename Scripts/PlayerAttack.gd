@@ -6,10 +6,12 @@ extends NetworkObject
 @export var energy_recovery: float
 @export var attack_range: Area2D
 @export var attack_timer: Timer
+@export var player: Player
+@export var damage_ability: PlayerDamage
 
 var attacking: bool
 var energy: EnergyBar
-var detected_bodies: Array[Node2D]
+var detected_bodies: Array[Enemy]
 
 func _ready() -> void:
 	super._ready()
@@ -40,7 +42,8 @@ func _on_attack_timer():
 	if attacking:
 		for body in detected_bodies:
 			var enemy: Enemy = body as Enemy
-			print("Damage: " + str(enemy)) 
+			if enemy != null && player.team() != enemy.team():
+				damage_ability.damage(enemy.identity) 
 
 func _on_body_entered(body: Node2D):
 	detected_bodies.push_back(body)

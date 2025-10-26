@@ -1,9 +1,11 @@
+class_name HealthBar
 extends Control
 
 @export var progressBar: TextureProgressBar
 
 func _ready() -> void:
-	progressBar.value = 20
-
-func _on_prefixed_data(_data: String):
-	pass
+	IdentityManager.health = self
+	progressBar.value = 100
+	
+func damage():
+	progressBar.value -= 10

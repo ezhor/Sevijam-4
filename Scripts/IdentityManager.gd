@@ -6,6 +6,7 @@ extends NetworkObject
 
 var identity: int
 var playerReference: Player
+var health: HealthBar
 
 func _on_prefixed_data(data: String):
 	identity = int(data.split("@")[2])

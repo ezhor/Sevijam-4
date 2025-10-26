@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bemol3e8ab0ey"]
+[gd_scene load_steps=7 format=3 uid="uid://bemol3e8ab0ey"]
 
 [ext_resource type="Script" uid="uid://dnp7wwvah536j" path="res://Scripts/Player.gd" id="1_cvnsp"]
 [ext_resource type="SpriteFrames" uid="uid://c4xj02nwo6n3t" path="res://Animations/character.tres" id="2_718o8"]
+[ext_resource type="Script" uid="uid://dhvxa11yvf5mu" path="res://Scripts/PlayerDamage.gd" id="3_imfct"]
 [ext_resource type="Script" uid="uid://bxpfyc5384pct" path="res://Scripts/PlayerAttack.gd" id="3_knc1s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_knc1s"]
@@ -21,7 +22,7 @@ sprite = NodePath("Sprite2D")
 prefix = "position"
 timer = NodePath("MovementTimer")
 
-[node name="AttackAbility" type="Node2D" parent="." node_paths=PackedStringArray("sprite", "attack_range", "attack_timer")]
+[node name="AttackAbility" type="Node2D" parent="." node_paths=PackedStringArray("sprite", "attack_range", "attack_timer", "player", "damage_ability")]
 position = Vector2(-2, 0)
 script = ExtResource("3_knc1s")
 sprite = NodePath("../Sprite2D")
@@ -29,6 +30,8 @@ energy_consumption = 50.0
 energy_recovery = 30.0
 attack_range = NodePath("Attack Range")
 attack_timer = NodePath("Timer")
+player = NodePath("..")
+damage_ability = NodePath("../DamageAbility")
 prefix = "attack"
 
 [node name="Attack Range" type="Area2D" parent="AttackAbility"]
@@ -43,6 +46,10 @@ debug_color = Color(0.7, 0, 0, 0.41960785)
 [node name="Timer" type="Timer" parent="AttackAbility"]
 wait_time = 0.333
 autostart = true
+
+[node name="DamageAbility" type="Node2D" parent="."]
+script = ExtResource("3_imfct")
+prefix = "damage"
 
 [node name="MovementTimer" type="Timer" parent="."]
 wait_time = 0.05

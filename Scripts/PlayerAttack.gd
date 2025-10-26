@@ -40,15 +40,13 @@ func _on_attack_timer():
 	if attacking:
 		for body in detected_bodies:
 			var enemy: Enemy = body as Enemy
-			print(enemy) 
+			print("Damage: " + str(enemy)) 
 
 func _on_body_entered(body: Node2D):
 	detected_bodies.push_back(body)
-	print(detected_bodies)
 
 func _on_body_exited(body: Node2D):
 	detected_bodies.remove_at(detected_bodies.find(body))
-	print(detected_bodies)
 
 func _on_prefixed_data(_data: String):
 	pass

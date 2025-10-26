@@ -8,11 +8,11 @@ var icons: Array[Sprite2D]
 
 func _ready() -> void:
 	super._ready()
-	icons.resize(len(IdentityManager.colors))
-	for i in range(len(IdentityManager.colors)):
+	icons.resize(100)
+	for i in range(icons.size()):
 		var instance: MapIcon = icon.instantiate() as MapIcon
 		instance.identity = i
-		instance.sprite.modulate = IdentityManager.colors[i]
+		instance.sprite.modulate = IdentityManager.colors[i%2]
 		instance.sprite.visible = false
 		add_child(instance)
 		icons[i] = instance.sprite

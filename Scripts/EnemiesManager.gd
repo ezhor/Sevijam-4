@@ -7,7 +7,9 @@ var enemies: Array[Enemy]
 
 func _ready() -> void:
 	super._ready()
-	enemies.resize(len(IdentityManager.colors))
+	enemies.resize(100)
+	for i in enemies.size():
+		enemies[i] = null
 
 
 func _on_prefixed_data(data: String):
@@ -18,5 +20,5 @@ func _on_prefixed_data(data: String):
 	else:		
 		var instance: Enemy = enemy.instantiate() as Enemy
 		instance.initialize(identity)
-		enemies[identity] = instance
+		enemies[identity] = instance	
 		add_child(instance)

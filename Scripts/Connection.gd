@@ -7,7 +7,6 @@ var socket = WebSocketPeer.new()
 
 
 func _ready():
-	# Initiate connection to the given URL.
 	var err = socket.connect_to_url(websocket_url)
 	if err != OK:
 		push_error("Unable to connect.")
@@ -24,7 +23,7 @@ func _process(_delta):
 			var packet = socket.get_packet()
 			if socket.was_string_packet():
 				var packet_text = packet.get_string_from_utf8()
-				print(packet_text)
+				#print(packet_text)
 				_on_data.emit(packet_text)
 			else:
 				print("< Got binary data from server: %d bytes" % packet.size())

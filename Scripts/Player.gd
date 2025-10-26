@@ -8,11 +8,10 @@ func _physics_process(delta: float) -> void:
 	var direction: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	if direction.x > 0:
-		sprite.flip_h = false
-		sprite.offset.x = offset
+		scale.x = 1		
 	elif direction.x < 0:
-		sprite.flip_h = true
-		sprite.offset.x = -offset
+		scale.x = -1
+	rotation = 0
 	
 	if !attackAbility.attacking:
 		if direction.length() > 0:

@@ -22,3 +22,4 @@ res://Scenes/UI/energy_bar.tscn
 res://Scripts/UI/StatBar.gd
 res://Scripts/UI/EnergyBar.gd
 res://Scripts/UI/HealthBar.gd
+res://Scenes/objects/hair.tscn

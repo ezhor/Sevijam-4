@@ -1,17 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://bemol3e8ab0ey"]
+[gd_scene load_steps=6 format=3 uid="uid://bemol3e8ab0ey"]
 
 [ext_resource type="Script" uid="uid://dnp7wwvah536j" path="res://Scripts/Player.gd" id="1_cvnsp"]
 [ext_resource type="SpriteFrames" uid="uid://c4xj02nwo6n3t" path="res://Animations/character.tres" id="2_718o8"]
 [ext_resource type="Script" uid="uid://bxpfyc5384pct" path="res://Scripts/PlayerAttack.gd" id="3_knc1s"]
 
-[node name="Player" type="Node2D" node_paths=PackedStringArray("attackAbility", "sprite", "timer")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knc1s"]
+size = Vector2(125, 41)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_718o8"]
+radius = 69.79
+height = 186.13
+
+[node name="Player" type="RigidBody2D" node_paths=PackedStringArray("attackAbility", "sprite")]
+gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("1_cvnsp")
 speed = 500.0
 attackAbility = NodePath("AttackAbility")
 sprite = NodePath("Sprite2D")
-prefix = "position"
-timer = NodePath("MovementTimer")
-metadata/_custom_type_script = "uid://dnp7wwvah536j"
+
+[node name="AttackAbility" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
+position = Vector2(-2, 0)
+script = ExtResource("3_knc1s")
+sprite = NodePath("../Sprite2D")
+energy_consumption = 50.0
+energy_recovery = 30.0
+prefix = "attack"
+
+[node name="Attack Range" type="Area2D" parent="AttackAbility"]
+position = Vector2(207, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackAbility/Attack Range"]
+z_index = 1000
+position = Vector2(-7, 51)
+shape = SubResource("RectangleShape2D_knc1s")
+debug_color = Color(0.7, 0, 0, 0.41960785)
 
 [node name="MovementTimer" type="Timer" parent="."]
 wait_time = 0.05
@@ -20,15 +43,12 @@ autostart = true
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
 sprite_frames = ExtResource("2_718o8")
-animation = &"run"
+animation = &"attack"
 offset = Vector2(75, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="AttackAbility" type="Node2D" parent="." node_paths=PackedStringArray("sprite")]
-position = Vector2(-2, 0)
-script = ExtResource("3_knc1s")
-sprite = NodePath("../Sprite2D")
-energy_consumption = 50.0
-energy_recovery = 25.0
-prefix = "attack"
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1000
+position = Vector2(0, 18.415)
+shape = SubResource("CapsuleShape2D_718o8")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://tfrxxkw8gxx3"]
+
+[ext_resource type="Texture2D" uid="uid://l7h7b5k0xhon" path="res://Sprites/Enviroment/pelo0033.png" id="1_bfjax"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bfjax"]
+radius = 38.77
+height = 180.0
+
+[node name="Hair" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(2, 150.5)
+texture = ExtResource("1_bfjax")
+offset = Vector2(0, -500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-59, 94.5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_bfjax")

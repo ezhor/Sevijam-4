@@ -28,7 +28,7 @@ energy_consumption = 50.0
 energy_recovery = 30.0
 attack_range = NodePath("Attack Range")
 attack_timer = NodePath("Timer")
-player = NodePath("")
+player = NodePath("..")
 damage_ability = NodePath("../DamageAbility")
 prefix = "attack"
 
